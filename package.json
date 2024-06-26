@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "deploy": "wrangler deploy",
+		"token": "wrangler secret put TOKEN",
     "dev": "wrangler dev",
     "start": "wrangler dev",
     "test": "vitest",

@@ -4,4 +4,5 @@ interface Env {
 	EMAIL: SendEmail;
 	SENDER: string;
 	RECIPIENT: string;
+	TOKEN: string;
 }

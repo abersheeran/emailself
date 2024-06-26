@@ -15,6 +15,7 @@ const validator = new Validator({
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
+		if (request.headers.get("Token") !== env.TOKEN) return new Response("", { status: 401 });
 		const json: any = request.method === "GET" ? {} : await request.json()
 		const v = validator.validate(json);
 		if (!v.valid) {
